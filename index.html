@@ -1,0 +1,323 @@
+<title>Pemetic Partners</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#EDEFEA;
+    --bg-raised:#E3E6DD;
+    --ink:#15201C;
+    --ink-soft:#48554D;
+    --rule:#C6CBBE;
+    --brass:#9C7A2E;
+    --brass-strong:#6E5518;
+    --accent-wash:#E4D9B8;
+    --on-brass:#171708;
+
+    --font-display:'Fraunces','Iowan Old Style','Palatino Linotype',Georgia,serif;
+    --font-body:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --font-mono:'IBM Plex Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;
+
+    --fs-eyebrow:0.72rem;
+    --fs-small:0.875rem;
+    --fs-body:1.0625rem;
+    --fs-lead:1.22rem;
+    --fs-h2:clamp(1.55rem,1.15rem + 1.7vw,2.35rem);
+    --fs-h1:clamp(2.3rem,1.7rem + 3vw,3.6rem);
+    --fs-stat:clamp(1.9rem,1.5rem + 1.4vw,2.6rem);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121A16;
+      --bg-raised:#1B251F;
+      --ink:#E9ECE3;
+      --ink-soft:#A9B2A5;
+      --rule:#333F37;
+      --brass:#D3A94A;
+      --brass-strong:#E8C36E;
+      --accent-wash:#2A2517;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121A16;
+    --bg-raised:#1B251F;
+    --ink:#E9ECE3;
+    --ink-soft:#A9B2A5;
+    --rule:#333F37;
+    --brass:#D3A94A;
+    --brass-strong:#E8C36E;
+    --accent-wash:#2A2517;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:var(--fs-body);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:var(--font-display);
+    color:var(--ink);
+    text-wrap:balance;
+    line-height:1.1;
+    margin:0;
+  }
+  h1{font-size:var(--fs-h1);font-weight:600;}
+  h2{font-size:var(--fs-h2);font-weight:600;}
+  h3{font-size:clamp(1.15rem,1rem + 0.6vw,1.4rem);font-weight:500;}
+  p{margin:0;}
+  a{color:inherit;}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--brass-strong);outline-offset:3px;}
+  .prose{max-width:38rem;}
+  .prose + .prose{margin-top:1.1rem;}
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:var(--fs-eyebrow);
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brass-strong);
+  }
+
+  .shell{max-width:1080px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem);}
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:10;
+    background:var(--bg);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0.95rem 0;
+  }
+  .wordmark{
+    font-family:var(--font-display);font-weight:600;font-size:1.05rem;
+    letter-spacing:0.01em;text-decoration:none;
+  }
+  .navlinks{display:flex;gap:1.75rem;align-items:center;font-size:0.92rem;}
+  .navlinks a{text-decoration:none;color:var(--ink-soft);position:relative;padding-bottom:0.2rem;}
+  .navlinks a::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+    background:var(--brass-strong);transform:scaleX(0);transform-origin:left;
+    transition:transform 0.2s ease;
+  }
+  .navlinks a:hover::after,.navlinks a:focus-visible::after{transform:scaleX(1);}
+  @media (max-width:760px){ .navlinks{display:none;} }
+
+  .btn{
+    font-family:var(--font-body);font-size:0.9rem;font-weight:600;
+    text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;
+    padding:0.65rem 1.15rem;border-radius:2px;border:1px solid transparent;
+    transition:background 0.18s ease,color 0.18s ease,border-color 0.18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--brass);color:var(--on-brass);}
+  .btn-primary:hover{background:var(--brass-strong);color:var(--on-brass);}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--brass-strong);color:var(--brass-strong);}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:clamp(3rem,8vw,5.5rem) 0 clamp(2.5rem,6vw,4rem);overflow:hidden;}
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
+    background-image:repeating-linear-gradient(to bottom, var(--rule) 0, var(--rule) 1px, transparent 1px, transparent 42px);
+    opacity:0.35;
+    mask-image:linear-gradient(to bottom, black, transparent 85%);
+  }
+  .hero-eyebrow{opacity:0;animation:rise 0.6s ease-out 0.05s forwards;}
+  .hero h1{margin-top:0.9rem;max-width:15ch;opacity:0;animation:rise 0.6s ease-out 0.18s forwards;}
+  .hero .prose{margin-top:1.35rem;font-size:var(--fs-lead);color:var(--ink-soft);opacity:0;animation:rise 0.6s ease-out 0.3s forwards;}
+  .hero-cta{margin-top:1.9rem;display:flex;flex-wrap:wrap;gap:1.1rem;align-items:center;opacity:0;animation:rise 0.6s ease-out 0.42s forwards;}
+  .hero-cta .mail{font-family:var(--font-mono);font-size:0.88rem;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--rule);}
+  .hero-cta .mail:hover{color:var(--brass-strong);border-color:var(--brass-strong);}
+  @keyframes rise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+  @media (prefers-reduced-motion: reduce){
+    .hero-eyebrow,.hero h1,.hero .prose,.hero-cta{animation:none;opacity:1;}
+  }
+
+  /* ---------- exhibits ---------- */
+  .exhibit{border-top:1px solid var(--rule);padding:clamp(2.4rem,6vw,3.6rem) 0;}
+  .exhibit-grid{display:grid;grid-template-columns:140px minmax(0,1fr);gap:clamp(1.5rem,4vw,3rem);}
+  @media (max-width:760px){ .exhibit-grid{grid-template-columns:1fr;gap:1rem;} }
+  .exhibit-label{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass-strong);line-height:1.5;}
+  .exhibit h2{margin-bottom:1rem;}
+
+  /* scope */
+  .scope-list{list-style:none;margin:0.4rem 0 0;padding:0;max-width:42rem;display:flex;flex-direction:column;gap:0.85rem;}
+  .scope-list li{display:grid;grid-template-columns:1.1rem 1fr;gap:0.7rem;color:var(--ink-soft);}
+  .scope-list li::before{content:"—";font-family:var(--font-mono);color:var(--brass-strong);}
+
+  /* engagement */
+  .stamp{
+    margin:1.7rem 0 1.7rem;max-width:42rem;
+    border:1px solid var(--rule);border-left:3px solid var(--brass);
+    background:var(--bg-raised);padding:1.15rem 1.35rem;
+  }
+  .stamp p{font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.55;}
+
+  /* proof */
+  .case{margin-top:0;padding-top:2.2rem;}
+  .case + .case{margin-top:2.6rem;border-top:1px solid var(--rule);padding-top:2.6rem;}
+  .case-tag{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);}
+  .case h3{margin-top:0.55rem;font-size:1.3rem;max-width:36ch;}
+  .stat-row{display:flex;flex-wrap:wrap;gap:2.2rem;margin:1.3rem 0 1.5rem;}
+  .stat{border-top:1px solid var(--brass);padding-top:0.5rem;min-width:9rem;}
+  .stat b{display:block;font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-size:var(--fs-stat);color:var(--ink);font-weight:500;}
+  .stat span{display:block;font-size:var(--fs-small);color:var(--ink-soft);margin-top:0.2rem;}
+  .case p{max-width:44rem;color:var(--ink-soft);margin-top:1rem;}
+  .note{
+    margin-top:1.1rem;max-width:44rem;padding-left:1rem;border-left:2px solid var(--brass);
+  }
+  .note p{font-style:italic;color:var(--ink-soft);}
+  .note .tag{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass-strong);display:block;margin-bottom:0.35rem;font-style:normal;}
+
+  /* principal */
+  .principal p{max-width:42rem;}
+
+  /* signature / contact */
+  .closing{border-top:1px solid var(--rule);padding:clamp(3rem,7vw,4.5rem) 0 clamp(2.5rem,5vw,3.5rem);}
+  .closing h2{max-width:20ch;}
+  .closing .prose{margin-top:1rem;color:var(--ink-soft);}
+  .sig{margin-top:2.4rem;max-width:26rem;}
+  .sig-line{border-top:1px solid var(--ink);padding-top:0.75rem;}
+  .sig-name{font-family:var(--font-display);font-size:1.15rem;}
+  .sig-role{font-family:var(--font-mono);font-size:0.78rem;color:var(--ink-soft);letter-spacing:0.04em;margin-top:0.15rem;}
+  .contact-links{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;}
+  .contact-links a.plain{font-family:var(--font-mono);font-size:0.9rem;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--rule);}
+  .contact-links a.plain:hover{color:var(--brass-strong);border-color:var(--brass-strong);}
+
+  footer{padding:1.6rem 0 2.4rem;}
+  footer p{font-family:var(--font-mono);font-size:0.72rem;color:var(--ink-soft);letter-spacing:0.03em;}
+</style>
+
+<nav class="nav">
+  <div class="shell nav-inner">
+    <a class="wordmark" href="#top">Pemetic Partners</a>
+    <div class="navlinks">
+      <a href="#method">Method</a>
+      <a href="#scope">Scope</a>
+      <a href="#engagement">Engagement</a>
+      <a href="#record">Record</a>
+      <a href="#principal">Principal</a>
+    </div>
+    <a class="btn btn-primary" href="mailto:jake@pemeticpartners.com?subject=Intro%20call">Book a call</a>
+  </div>
+</nav>
+
+<main id="top">
+  <section class="hero shell">
+    <p class="eyebrow hero-eyebrow">AI-Enabled Go-to-Market &amp; Operating-Partner Advisory</p>
+    <h1>Tribal, relationship-run commercial operations, turned into a system that scales.</h1>
+    <p class="prose">Pemetic Partners works with technical, expertise-driven B2B companies&nbsp;&mdash; labs, platforms, energy and industrial businesses, specialized-services firms&nbsp;&mdash; to fix the process gaps that make growth unpredictable, then layer AI only where it moves a number.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="mailto:jake@pemeticpartners.com?subject=Intro%20call">Book an intro call</a>
+      <a class="mail" href="mailto:jake@pemeticpartners.com">jake@pemeticpartners.com</a>
+    </div>
+  </section>
+
+  <section class="exhibit" id="method">
+    <div class="shell exhibit-grid">
+      <p class="exhibit-label">Exhibit A<br>Method</p>
+      <div>
+        <h2>Process first. AI second. In that order, every time.</h2>
+        <p class="prose" style="color:var(--ink-soft)">Most commercial teams don&rsquo;t have an AI problem &mdash; they have a process problem AI can&rsquo;t fix by itself. We install the qualification, pipeline, and workflow discipline that makes your data trustworthy, then push your existing CRM as far as it goes, buy point tools where it falls short, and build custom AI only where nothing else reaches &mdash; always with a human signing off wherever the output has to be court- or audit-grade.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibit" id="scope">
+    <div class="shell exhibit-grid">
+      <p class="exhibit-label">Exhibit B<br>Scope</p>
+      <div>
+        <h2>Built for teams where the expertise is the product.</h2>
+        <ul class="scope-list">
+          <li>Capital-intensive platforms running long, multi-stakeholder enterprise sales cycles</li>
+          <li>Compliance and regulated-industry software companies scaling a lean go-to-market team through a demand surge</li>
+          <li>Labs, technical-services, and specialized-expertise firms moving off a referral-only growth model</li>
+          <li>Energy, industrial, and infrastructure businesses professionalizing a commercial function that has always run on relationships</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibit" id="engagement">
+    <div class="shell exhibit-grid">
+      <p class="exhibit-label">Exhibit C<br>Engagement</p>
+      <div>
+        <h2>Try before you buy.</h2>
+        <p class="prose" style="color:var(--ink-soft)">Every engagement starts as a short, paid pilot &mdash; not a multi-year contract. We quantify your baseline, install the process and the AI layer underneath it, and keep a monthly value scoreboard: fees against realized dollars.</p>
+        <div class="stamp">
+          <p>If the savings don&rsquo;t clearly beat the cost, we don&rsquo;t extend. Our stated goal on every engagement is to automate ourselves out within 12&ndash;15 months &mdash; we&rsquo;re not selling permanent overhead.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibit" id="record">
+    <div class="shell exhibit-grid">
+      <p class="exhibit-label">Exhibit D<br>Record</p>
+      <div>
+        <h2>Two engagements, anonymized.</h2>
+
+        <article class="case">
+          <p class="case-tag">Capital-intensive platform &middot; long enterprise cycles</p>
+          <h3>Six-figure deals were stalling in late stage, with no clear reason.</h3>
+          <p>Senior people were being pulled into every deal with no way to tell which ones were worth their time. We installed a real qualification standard &mdash; champion mapping, economic-buyer identification, explicit win-probability &mdash; then layered in AI-assisted deal review and drafting. Multiple stalled deals unblocked; the same team, moving faster.</p>
+          <div class="note">
+            <span class="tag">Takeaway</span>
+            <p>The ROI wasn&rsquo;t a flashy model &mdash; it was process discipline made durable by AI, so scarce senior time compounds instead of leaking into dead deals.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <p class="case-tag">Lean team &middot; time-boxed demand window</p>
+          <h3>A small go-to-market team, flying blind through a demand surge.</h3>
+          <div class="stat-row">
+            <div class="stat"><b>~37%</b><span>of deals with an identified economic buyer</span></div>
+            <div class="stat"><b>1 / 94</b><span>open deals with a scheduled next step</span></div>
+          </div>
+          <p>We fixed the CRM fundamentals first, then built five purpose-built AI agents &mdash; account research, deal review, pricing, legal, strategic pipeline &mdash; running on clean data. Pipeline completeness rose sharply and the team covered far more ground than headcount would suggest.</p>
+          <div class="note">
+            <span class="tag">Takeaway</span>
+            <p>Custom AI agents let a lean team punch above its weight &mdash; but only after the data underneath is trustworthy. Agents on dirty pipeline data just automate the confusion.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibit principal" id="principal">
+    <div class="shell exhibit-grid">
+      <p class="exhibit-label">Exhibit E<br>Principal</p>
+      <div>
+        <h2>About Jake Blaine</h2>
+        <p>Jake founded Pemetic Partners after operating inside growth-stage and family-owned businesses himself. He is a fifth-generation member of the Milliken family and currently serves on the boards of Pacolet Milliken and Milliken &amp; Company &mdash; the same standard of operating discipline he&rsquo;d want applied to his own family&rsquo;s companies is what he brings to every engagement: process before tooling, measured results before renewal, and a human signature on anything that has to stand up.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="shell">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Let&rsquo;s talk about your commercial operation.</h2>
+      <p class="prose">The best next step is a short call &mdash; no deck, no pitch, just your situation.</p>
+      <div class="sig">
+        <div class="sig-line">
+          <p class="sig-name">Jake Blaine</p>
+          <p class="sig-role">Pemetic Partners, LLC</p>
+        </div>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:jake@pemeticpartners.com?subject=Intro%20call">Book an intro call</a>
+          <a class="plain" href="mailto:jake@pemeticpartners.com">jake@pemeticpartners.com</a>
+          <a class="plain" href="tel:+18609307385">+1&nbsp;860.930.7385</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="shell">
+  <p>&copy; 2026 Pemetic Partners, LLC. All rights reserved.</p>
+</footer>
