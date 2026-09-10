@@ -4,239 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pemetic Partners</title>
-<meta name="description" content="Pemetic Partners is an AI-enabled go-to-market and operating-partner advisory for technical, expertise-driven B2B companies — process first, AI second.">
+<meta name="description" content="Pemetic Partners is an execution-based go-to-market firm. We install the process and automation that unlocks revenue.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="canonical" href="https://pemeticpartners.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pemeticpartners.com/">
 <meta property="og:title" content="Pemetic Partners">
-<meta property="og:description" content="AI-enabled go-to-market and operating-partner advisory for technical, expertise-driven B2B companies — process first, AI second.">
+<meta property="og:description" content="An execution-based go-to-market firm. We install the process and automation that unlocks revenue.">
 <meta property="og:image" content="https://pemeticpartners.com/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pemetic Partners">
-<meta name="twitter:description" content="AI-enabled go-to-market and operating-partner advisory for technical, expertise-driven B2B companies — process first, AI second.">
+<meta name="twitter:description" content="An execution-based go-to-market firm. We install the process and automation that unlocks revenue.">
 <meta name="twitter:image" content="https://pemeticpartners.com/og-image.jpg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-  :root{
-    --bg:#FBF7EF;
-    --bg-raised:#F1E9D8;
-    --ink:#113241;
-    --ink-soft:#52646E;
-    --rule:#E3DBC9;
-    --brass:#2F666C;
-    --brass-strong:#16444D;
-    --accent-wash:#DCE7E6;
-    --on-brass:#FBF7EF;
-
-    --font-display:'Fraunces','Iowan Old Style','Palatino Linotype',Georgia,serif;
-    --font-body:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-    --font-mono:'IBM Plex Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;
-
-    --fs-eyebrow:0.72rem;
-    --fs-small:0.875rem;
-    --fs-body:1.0625rem;
-    --fs-lead:1.22rem;
-    --fs-h2:clamp(1.55rem,1.15rem + 1.7vw,2.35rem);
-    --fs-h1:clamp(2.3rem,1.7rem + 3vw,3.6rem);
-    --fs-stat:clamp(1.9rem,1.5rem + 1.4vw,2.6rem);
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#0F1D24;
-      --bg-raised:#172930;
-      --ink:#EDE7DA;
-      --ink-soft:#A9BCC2;
-      --rule:#2A3F47;
-      --brass:#6FB0AE;
-      --brass-strong:#8FCCC0;
-      --accent-wash:#1B2E33;
-      --on-brass:#0F1D24;
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#0F1D24;
-    --bg-raised:#172930;
-    --ink:#EDE7DA;
-    --ink-soft:#A9BCC2;
-    --rule:#2A3F47;
-    --brass:#6FB0AE;
-    --brass-strong:#8FCCC0;
-    --accent-wash:#1B2E33;
-    --on-brass:#0F1D24;
-  }
-
-  *{box-sizing:border-box;}
-  body{
-    background:var(--bg);
-    color:var(--ink);
-    font-family:var(--font-body);
-    font-size:var(--fs-body);
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{
-    font-family:var(--font-display);
-    color:var(--ink);
-    text-wrap:balance;
-    line-height:1.1;
-    margin:0;
-  }
-  h1{font-size:var(--fs-h1);font-weight:600;}
-  h2{font-size:var(--fs-h2);font-weight:600;}
-  h3{font-size:clamp(1.15rem,1rem + 0.6vw,1.4rem);font-weight:500;}
-  p{margin:0;}
-  a{color:inherit;}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--brass-strong);outline-offset:3px;}
-  .prose{max-width:38rem;}
-  .prose + .prose{margin-top:1.1rem;}
-
-  .eyebrow{
-    font-family:var(--font-mono);
-    font-size:var(--fs-eyebrow);
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--brass-strong);
-  }
-
-  .shell{max-width:1080px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem);}
-
-  /* ---------- nav ---------- */
-  .nav{
-    position:sticky;top:0;z-index:10;
-    background:var(--bg);
-    border-bottom:1px solid var(--rule);
-  }
-  .nav-inner{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:0.95rem 0;
-  }
-  .wordmark{
-    font-family:var(--font-display);font-weight:600;font-size:1.05rem;
-    letter-spacing:0.01em;text-decoration:none;
-    display:inline-flex;align-items:center;gap:0.6rem;
-  }
-  .wordmark svg{flex:none;border-radius:5px;}
-  .hero-logo{max-width:min(420px,80%);height:auto;display:block;margin-bottom:2.2rem;border-radius:2px;}
-  .navlinks{display:flex;gap:1.75rem;align-items:center;font-size:0.92rem;}
-  .navlinks a{text-decoration:none;color:var(--ink-soft);position:relative;padding-bottom:0.2rem;}
-  .navlinks a::after{
-    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
-    background:var(--brass-strong);transform:scaleX(0);transform-origin:left;
-    transition:transform 0.2s ease;
-  }
-  .navlinks a:hover::after,.navlinks a:focus-visible::after{transform:scaleX(1);}
-  @media (max-width:760px){ .navlinks{display:none;} }
-
-  .btn{
-    font-family:var(--font-body);font-size:0.9rem;font-weight:600;
-    text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;
-    padding:0.65rem 1.15rem;border-radius:2px;border:1px solid transparent;
-    transition:background 0.18s ease,color 0.18s ease,border-color 0.18s ease;
-    white-space:nowrap;
-  }
-  .btn-primary{background:var(--brass);color:var(--on-brass);}
-  .btn-primary:hover{background:var(--brass-strong);color:var(--on-brass);}
-  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--rule);}
-  .btn-ghost:hover{border-color:var(--brass-strong);color:var(--brass-strong);}
-
-  /* ---------- hero ---------- */
-  .hero{position:relative;padding:clamp(3rem,8vw,5.5rem) 0 clamp(2.5rem,6vw,4rem);overflow:hidden;}
-  .hero::before{
-    content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
-    background-image:repeating-linear-gradient(to bottom, var(--rule) 0, var(--rule) 1px, transparent 1px, transparent 42px);
-    opacity:0.35;
-    mask-image:linear-gradient(to bottom, black, transparent 85%);
-  }
-  .hero-eyebrow{opacity:0;animation:rise 0.6s ease-out 0.05s forwards;}
-  .hero h1{margin-top:0.9rem;max-width:15ch;opacity:0;animation:rise 0.6s ease-out 0.18s forwards;}
-  .hero .prose{margin-top:1.35rem;font-size:var(--fs-lead);color:var(--ink-soft);opacity:0;animation:rise 0.6s ease-out 0.3s forwards;}
-  .hero-cta{margin-top:1.9rem;display:flex;flex-wrap:wrap;gap:1.1rem;align-items:center;opacity:0;animation:rise 0.6s ease-out 0.42s forwards;}
-  .hero-cta .mail{font-family:var(--font-mono);font-size:0.88rem;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--rule);}
-  .hero-cta .mail:hover{color:var(--brass-strong);border-color:var(--brass-strong);}
-  @keyframes rise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
-  @media (prefers-reduced-motion: reduce){
-    .hero-eyebrow,.hero h1,.hero .prose,.hero-cta{animation:none;opacity:1;}
-  }
-
-  /* ---------- exhibits ---------- */
-  .exhibit{border-top:1px solid var(--rule);padding:clamp(2.4rem,6vw,3.6rem) 0;}
-  .exhibit-grid{display:grid;grid-template-columns:140px minmax(0,1fr);gap:clamp(1.5rem,4vw,3rem);}
-  @media (max-width:760px){ .exhibit-grid{grid-template-columns:1fr;gap:1rem;} }
-  .exhibit-label{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass-strong);line-height:1.5;}
-  .exhibit h2{margin-bottom:1rem;}
-
-  /* scope */
-  .scope-list{list-style:none;margin:0.4rem 0 0;padding:0;max-width:42rem;display:flex;flex-direction:column;gap:0.85rem;}
-  .scope-list li{display:grid;grid-template-columns:1.1rem 1fr;gap:0.7rem;color:var(--ink-soft);}
-  .scope-list li::before{content:"—";font-family:var(--font-mono);color:var(--brass-strong);}
-
-  /* engagement */
-  .stamp{
-    margin:1.7rem 0 1.7rem;max-width:42rem;
-    border:1px solid var(--rule);border-left:3px solid var(--brass);
-    background:var(--bg-raised);padding:1.15rem 1.35rem;
-  }
-  .stamp p{font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.55;}
-
-  /* proof */
-  .case{margin-top:0;padding-top:2.2rem;}
-  .case + .case{margin-top:2.6rem;border-top:1px solid var(--rule);padding-top:2.6rem;}
-  .case-tag{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);}
-  .case h3{margin-top:0.55rem;font-size:1.3rem;max-width:36ch;}
-  .stat-row{display:flex;flex-wrap:wrap;gap:2.2rem;margin:1.3rem 0 1.5rem;}
-  .stat{border-top:1px solid var(--brass);padding-top:0.5rem;min-width:9rem;}
-  .stat b{display:block;font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-size:var(--fs-stat);color:var(--ink);font-weight:500;}
-  .stat span{display:block;font-size:var(--fs-small);color:var(--ink-soft);margin-top:0.2rem;}
-  .case p{max-width:44rem;color:var(--ink-soft);margin-top:1rem;}
-  .note{
-    margin-top:1.1rem;max-width:44rem;padding-left:1rem;border-left:2px solid var(--brass);
-  }
-  .note p{font-style:italic;color:var(--ink-soft);}
-  .note .tag{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass-strong);display:block;margin-bottom:0.35rem;font-style:normal;}
-
-  /* principal */
-  .principal p{max-width:42rem;}
-  .principal-body{display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;}
-  .principal-photo{width:150px;flex:none;border-radius:2px;filter:grayscale(0.15);}
-  .principal-text{flex:1 1 26rem;min-width:0;}
-
-  /* signature / contact */
-  .closing{border-top:1px solid var(--rule);padding:clamp(3rem,7vw,4.5rem) 0 clamp(2.5rem,5vw,3.5rem);}
-  .closing h2{max-width:20ch;}
-  .closing .prose{margin-top:1rem;color:var(--ink-soft);}
-  .sig{margin-top:2.4rem;max-width:26rem;}
-  .sig-line{border-top:1px solid var(--ink);padding-top:0.75rem;}
-  .sig-name{font-family:var(--font-display);font-size:1.15rem;}
-  .sig-role{font-family:var(--font-mono);font-size:0.78rem;color:var(--ink-soft);letter-spacing:0.04em;margin-top:0.15rem;}
-  .contact-links{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;}
-  .contact-links a.plain{font-family:var(--font-mono);font-size:0.9rem;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--rule);}
-  .contact-links a.plain:hover{color:var(--brass-strong);border-color:var(--brass-strong);}
-
-  footer{padding:1.6rem 0 2.4rem;}
-  footer p{font-family:var(--font-mono);font-size:0.72rem;color:var(--ink-soft);letter-spacing:0.03em;}
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
 <nav class="nav">
   <div class="shell nav-inner">
-    <a class="wordmark" href="#top">
+    <a class="wordmark" href="/">
       <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#74ACC7"/><rect y="32" width="64" height="32" fill="#16444D"/><text x="32" y="43" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#FBF7EF" text-anchor="middle">PP</text></svg>
       Pemetic Partners
     </a>
     <div class="navlinks">
-      <a href="#method">Method</a>
-      <a href="#scope">Scope</a>
-      <a href="#engagement">Engagement</a>
-      <a href="#record">Our Work</a>
-      <a href="#principal">About</a>
+      <a href="/method.html">Method</a>
+      <a href="/scope.html">Scope</a>
+      <a href="/engagement.html">Engagement</a>
+      <a href="/work.html">Our Work</a>
+      <a href="/about.html">About</a>
     </div>
     <a class="btn btn-primary" href="mailto:jake@pemeticpartners.com?subject=Intro%20call">Book a call</a>
   </div>
 </nav>
 
-<main id="top">
+<main>
   <section class="hero shell">
     <img class="hero-logo" src="/logo.jpg" alt="Pemetic Partners" width="1100" height="733">
     <p class="eyebrow hero-eyebrow">An Execution-Based Go-to-Market Firm</p>
@@ -248,86 +50,43 @@
     </div>
   </section>
 
-  <section class="exhibit" id="method">
-    <div class="shell exhibit-grid">
-      <p class="exhibit-label">Method</p>
-      <div>
+  <div class="teasers">
+    <a class="teaser" href="/method.html">
+      <div class="shell teaser-inner">
+        <p class="exhibit-label">Method</p>
         <h2>Process first. AI second.</h2>
-        <p class="prose" style="color:var(--ink-soft)">We install the qualification, pipeline, and workflow discipline that makes your data trustworthy. Then we layer in software tools to automate and augment that process going forward &mdash; pushing your existing CRM as far as it goes, buying point tools where it falls short, and building custom AI only where nothing else reaches. A human always signs off wherever the output has to be court- or audit-grade.</p>
+        <span class="teaser-arrow">Read &rarr;</span>
       </div>
-    </div>
-  </section>
-
-  <section class="exhibit" id="scope">
-    <div class="shell exhibit-grid">
-      <p class="exhibit-label">Scope</p>
-      <div>
-        <h2>Built for companies scaling go-to-market &mdash; across industries.</h2>
-        <ul class="scope-list">
-          <li>Complex, multi-threaded, and/or multi-stakeholder sales cycles</li>
-          <li>Scaling a go-to-market team to grow revenue while managing opex, overhead, and SG&amp;A</li>
-          <li>Energy, industrial, and infrastructure businesses professionalizing a commercial function that has always run on relationships</li>
-        </ul>
+    </a>
+    <a class="teaser" href="/scope.html">
+      <div class="shell teaser-inner">
+        <p class="exhibit-label">Scope</p>
+        <h2>Who we work with.</h2>
+        <span class="teaser-arrow">Read &rarr;</span>
       </div>
-    </div>
-  </section>
-
-  <section class="exhibit" id="engagement">
-    <div class="shell exhibit-grid">
-      <p class="exhibit-label">Engagement</p>
-      <div>
+    </a>
+    <a class="teaser" href="/engagement.html">
+      <div class="shell teaser-inner">
+        <p class="exhibit-label">Engagement</p>
         <h2>Every engagement starts with a 90-day pilot.</h2>
-        <p class="prose" style="color:var(--ink-soft)">Not a multi-year contract &mdash; a sample engagement, paid, that quantifies your baseline, installs the process and the AI layer underneath it, and keeps a monthly value scoreboard: fees against realized dollars.</p>
-        <div class="stamp">
-          <p>If the savings don&rsquo;t clearly beat the cost, we don&rsquo;t extend. Our stated goal on every engagement is to automate ourselves out within 12&ndash;15 months &mdash; we&rsquo;re not selling permanent overhead.</p>
-        </div>
+        <span class="teaser-arrow">Read &rarr;</span>
       </div>
-    </div>
-  </section>
-
-  <section class="exhibit" id="record">
-    <div class="shell exhibit-grid">
-      <p class="exhibit-label">Our Work</p>
-      <div>
+    </a>
+    <a class="teaser" href="/work.html">
+      <div class="shell teaser-inner">
+        <p class="exhibit-label">Our Work</p>
         <h2>Two engagements, anonymized.</h2>
-
-        <article class="case">
-          <p class="case-tag">Complex, multi-stakeholder sales cycles</p>
-          <h3>Six-figure deals were stalling in late stage, with no clear reason.</h3>
-          <p>Senior people were being pulled into every deal with no way to tell which ones were worth their time. We installed a real qualification standard &mdash; champion mapping, economic-buyer identification, explicit win-probability &mdash; then layered in AI-assisted deal review and drafting. Multiple stalled deals unblocked; the same team, moving faster.</p>
-          <div class="note">
-            <span class="tag">Takeaway</span>
-            <p>The ROI wasn&rsquo;t a flashy model &mdash; it was process discipline made durable by AI, so scarce senior time compounds instead of leaking into dead deals.</p>
-          </div>
-        </article>
-
-        <article class="case">
-          <p class="case-tag">Lean team &middot; time-boxed demand window</p>
-          <h3>A small go-to-market team, flying blind through a demand surge.</h3>
-          <p>Most open deals had no identified economic buyer and no scheduled next step &mdash; the team was working from memory, not from the pipeline. We fixed the CRM fundamentals first, then layered in a small suite of purpose-built AI agents covering the research and drafting work reps couldn&rsquo;t get to by hand. Pipeline completeness rose sharply, and the team covered far more ground than headcount would suggest.</p>
-          <div class="note">
-            <span class="tag">Takeaway</span>
-            <p>Custom AI agents let a lean team punch above its weight &mdash; but only after the data underneath is trustworthy. Agents on dirty pipeline data just automate the confusion.</p>
-          </div>
-        </article>
+        <span class="teaser-arrow">Read &rarr;</span>
       </div>
-    </div>
-  </section>
-
-  <section class="exhibit principal" id="principal">
-    <div class="shell exhibit-grid">
-      <p class="exhibit-label">About</p>
-      <div>
-        <h2>About Jake Blaine</h2>
-        <div class="principal-body">
-          <img class="principal-photo" src="/headshot.jpg" alt="Jake Blaine" width="150" height="150">
-          <div class="principal-text">
-            <p>Jake founded Pemetic Partners after operating inside growth-stage and family-owned businesses. He serves on the boards of Pacolet Milliken and Milliken &amp; Company, and brings the same operating discipline to every engagement: process before tooling, measured results before renewal, and a human signature on anything that has to stand up.</p>
-          </div>
-        </div>
+    </a>
+    <a class="teaser" href="/about.html">
+      <div class="shell teaser-inner">
+        <p class="exhibit-label">About</p>
+        <h2>About Jake Blaine.</h2>
+        <span class="teaser-arrow">Read &rarr;</span>
       </div>
-    </div>
-  </section>
+    </a>
+  </div>
 
   <section class="closing">
     <div class="shell">
