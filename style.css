@@ -96,8 +96,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brass-strong);outli
   letter-spacing:0.01em;text-decoration:none;
   display:inline-flex;align-items:center;gap:0.6rem;
 }
-.nav-logo{height:44px;width:auto;display:block;flex:none;}
-.hero-logo{width:200px;max-width:55%;height:auto;display:block;margin-bottom:1.1rem;border-radius:2px;}
+.nav-logo{width:200px;max-width:40vw;height:auto;display:block;flex:none;padding:0.5rem 0;}
 .navlinks{display:flex;gap:1.75rem;align-items:center;font-size:0.92rem;}
 .navlinks a{text-decoration:none;color:var(--ink-soft);position:relative;padding-bottom:0.2rem;}
 .navlinks a::after{
