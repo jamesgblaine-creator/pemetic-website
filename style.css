@@ -18,7 +18,7 @@
   --fs-body:1.0625rem;
   --fs-lead:1.22rem;
   --fs-h2:clamp(1.55rem,1.15rem + 1.7vw,2.35rem);
-  --fs-h1:clamp(2.3rem,1.7rem + 3vw,3.6rem);
+  --fs-h1:clamp(1.9rem,1.5rem + 1.8vw,2.9rem);
   --fs-stat:clamp(1.9rem,1.5rem + 1.4vw,2.6rem);
 }
 @media (prefers-color-scheme: dark){
@@ -122,15 +122,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brass-strong);outli
 .btn-ghost:hover{border-color:var(--brass-strong);color:var(--brass-strong);}
 
 /* ---------- hero ---------- */
-.hero{position:relative;padding:clamp(3rem,8vw,5.5rem) 0 clamp(2.5rem,6vw,4rem);overflow:hidden;}
-.hero::before{
-  content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
-  background-image:repeating-linear-gradient(to bottom, var(--rule) 0, var(--rule) 1px, transparent 1px, transparent 42px);
-  opacity:0.35;
-  mask-image:linear-gradient(to bottom, black, transparent 85%);
-}
+.hero{position:relative;padding:clamp(3rem,8vw,5.5rem) 0 clamp(2.5rem,6vw,4rem);}
 .hero-eyebrow{opacity:0;animation:rise 0.6s ease-out 0.05s forwards;}
-.hero h1{margin-top:0.9rem;max-width:15ch;opacity:0;animation:rise 0.6s ease-out 0.18s forwards;}
+.hero h1{margin-top:0.9rem;max-width:42ch;opacity:0;animation:rise 0.6s ease-out 0.18s forwards;}
 .hero .prose{margin-top:1.35rem;font-size:var(--fs-lead);color:var(--ink-soft);opacity:0;animation:rise 0.6s ease-out 0.3s forwards;}
 .hero-cta{margin-top:1.9rem;display:flex;flex-wrap:wrap;gap:1.1rem;align-items:center;opacity:0;animation:rise 0.6s ease-out 0.42s forwards;}
 .hero-cta .mail{font-family:var(--font-mono);font-size:0.88rem;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--rule);}
