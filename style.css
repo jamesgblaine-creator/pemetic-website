@@ -216,6 +216,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brass-strong);outli
 .stamp p{font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.55;}
 
 /* proof */
+.page-header.case-header{padding-top:1.5rem;padding-bottom:1.25rem;}
+.case-header .case-disclosure{margin-top:0.5rem;font-size:var(--fs-small);color:var(--ink-soft);}
+.case-exhibit{padding-top:1.5rem;}
 .case{margin-top:0;padding-top:2.2rem;}
 .case + .case{margin-top:2.6rem;border-top:1px solid var(--rule);padding-top:2.6rem;}
 .case-tag{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);}
@@ -231,6 +234,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brass-strong);outli
 .case h3 + p{margin-top:0.4rem;}
 .case-steps{max-width:44rem;margin:0.4rem 0 0;padding-left:1.35rem;color:var(--ink-soft);}
 .case-steps li + li{margin-top:0.5rem;}
+.case-steps strong{color:var(--ink);font-weight:600;}
 .note{
   margin-top:1.1rem;max-width:44rem;padding-left:1rem;border-left:2px solid var(--brass);
 }
