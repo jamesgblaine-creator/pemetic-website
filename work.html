@@ -9,11 +9,11 @@
 <link rel="canonical" href="https://pemeticpartners.com/work.html">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/style.css">
+<script src="/navigation.js" defer></script>
 </head>
 <body>
 
-<nav class="nav">
-  <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+<nav class="nav" aria-label="Main navigation">
   <div class="shell nav-inner">
     <a class="wordmark" href="/">
       <img class="nav-logo" src="/logo.jpg" alt="Pemetic Partners" width="66" height="44">
@@ -27,10 +27,10 @@
     </div>
     <div class="nav-actions">
       <a class="btn btn-primary" href="mailto:jake@pemeticpartners.com?subject=Intro%20call">Contact Us</a>
-      <label for="menu-toggle" class="menu-toggle-btn" aria-label="Open menu"><span></span><span></span><span></span></label>
+      <button type="button" class="menu-toggle-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     </div>
   </div>
-  <div class="mobile-menu">
+  <div id="mobile-menu" class="mobile-menu" hidden>
     <a href="/method.html">Approach</a>
     <a href="/scope.html">Client Profile</a>
     <a href="/engagement.html">Partnership Structure</a>
@@ -47,11 +47,11 @@
 
   <section class="exhibit">
     <div class="shell exhibit-grid">
-      <p class="exhibit-label">01</p>
+      <p class="exhibit-label">Engagements</p>
       <div>
         <article class="case" style="padding-top:0">
           <p class="case-tag">Complex, multi-stakeholder sales cycles</p>
-          <h3>Six-figure, late-stage opportunities were stalling without identifiable cause.</h3>
+          <h2>Six-figure, late-stage opportunities were stalling without identifiable cause.</h2>
           <p>Senior leadership was engaged on every opportunity, with no mechanism to distinguish which merited that attention. We implemented a formal qualification standard &mdash; champion mapping, economic-buyer identification, and explicit win-probability scoring &mdash; then introduced AI-assisted deal review, AI-drafted outreach, and a proven point tool to clear the late-stage legal bottleneck. Multiple stalled, late-stage opportunities were unblocked and advanced within the pilot, with no increase in headcount.</p>
           <p class="case-tag" style="margin-top:1.4rem">The result</p>
           <div class="stat-row">
@@ -67,7 +67,8 @@
 
         <article class="case">
           <p class="case-tag">Lean team &middot; time-boxed demand window</p>
-          <h3>A lean go-to-market team lacked pipeline visibility during a period of peak demand.</h3>
+          <h2>A lean go-to-market team lacked pipeline visibility during a period of peak demand.</h2>
+          <p class="case-tag">Before the engagement &middot; initial pipeline audit</p>
           <div class="stat-row">
             <div class="stat"><b>37%</b><span>open deals with an identified economic buyer</span></div>
             <div class="stat"><b>1 of 94</b><span>open deals with a scheduled next step</span></div>

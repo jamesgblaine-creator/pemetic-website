@@ -9,11 +9,11 @@
 <link rel="canonical" href="https://pemeticpartners.com/engagement.html">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/style.css">
+<script src="/navigation.js" defer></script>
 </head>
 <body>
 
-<nav class="nav">
-  <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+<nav class="nav" aria-label="Main navigation">
   <div class="shell nav-inner">
     <a class="wordmark" href="/">
       <img class="nav-logo" src="/logo.jpg" alt="Pemetic Partners" width="66" height="44">
@@ -27,10 +27,10 @@
     </div>
     <div class="nav-actions">
       <a class="btn btn-primary" href="mailto:jake@pemeticpartners.com?subject=Intro%20call">Contact Us</a>
-      <label for="menu-toggle" class="menu-toggle-btn" aria-label="Open menu"><span></span><span></span><span></span></label>
+      <button type="button" class="menu-toggle-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     </div>
   </div>
-  <div class="mobile-menu">
+  <div id="mobile-menu" class="mobile-menu" hidden>
     <a href="/method.html">Approach</a>
     <a href="/scope.html">Client Profile</a>
     <a href="/engagement.html" aria-current="page">Partnership Structure</a>

@@ -9,11 +9,11 @@
 <link rel="canonical" href="https://pemeticpartners.com/about.html">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/style.css">
+<script src="/navigation.js" defer></script>
 </head>
 <body>
 
-<nav class="nav">
-  <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+<nav class="nav" aria-label="Main navigation">
   <div class="shell nav-inner">
     <a class="wordmark" href="/">
       <img class="nav-logo" src="/logo.jpg" alt="Pemetic Partners" width="66" height="44">
@@ -27,10 +27,10 @@
     </div>
     <div class="nav-actions">
       <a class="btn btn-primary" href="mailto:jake@pemeticpartners.com?subject=Intro%20call">Contact Us</a>
-      <label for="menu-toggle" class="menu-toggle-btn" aria-label="Open menu"><span></span><span></span><span></span></label>
+      <button type="button" class="menu-toggle-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     </div>
   </div>
-  <div class="mobile-menu">
+  <div id="mobile-menu" class="mobile-menu" hidden>
     <a href="/method.html">Approach</a>
     <a href="/scope.html">Client Profile</a>
     <a href="/engagement.html">Partnership Structure</a>
@@ -42,7 +42,7 @@
 <main>
   <section class="page-header shell">
     <p class="eyebrow">About</p>
-    <h1 style="max-width:16ch">Jake Blaine</h1>
+    <h1 class="principal-name" style="max-width:16ch">Jake Blaine</h1>
   </section>
 
   <section class="exhibit principal">
@@ -52,7 +52,10 @@
         <div class="principal-body">
           <img class="principal-photo" src="/headshot.jpg" alt="Jake Blaine" width="150" height="150">
           <div class="principal-text">
-            <p>Jake founded Pemetic Partners after operating inside growth-stage and family-owned businesses. He serves on the boards of Pacolet Milliken and Milliken &amp; Company, and brings the same operating discipline to every engagement: process before tooling, measured results before renewal, and a human signature on anything that has to stand up.</p>
+            <p>Jake Blaine is founder and President of Pemetic Partners, where he helps growth-stage energy, infrastructure, and industrial companies improve commercial execution. His work draws on more than 20 years of experience building and scaling businesses.</p>
+            <p>Before founding Pemetic, Jake held leadership roles at Aspen Power, PearlX, Stem, and EnerNOC, working on the development, financing, ownership, and operation of renewable energy and energy-efficiency asset portfolios. He co-founded PearlX and served as Executive Vice President at Aspen Power.</p>
+            <p>Jake began his career in Enterprise Rent-A-Car&rsquo;s management training program before joining Bloomberg as a commodities analyst. He later served as Executive Director of Tompkins Conservation, helping create more than 10 million acres of national parks in Chile and Argentina.</p>
+            <p>Jake serves as a Director of Pacolet Milliken and a Board Observer at Milliken &amp; Company.</p>
           </div>
         </div>
       </div>
