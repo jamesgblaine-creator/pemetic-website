@@ -197,6 +197,9 @@
 
   /* principal */
   .principal p{max-width:42rem;}
+  .principal-body{display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;}
+  .principal-photo{width:150px;flex:none;border-radius:2px;filter:grayscale(0.15);}
+  .principal-text{flex:1 1 26rem;min-width:0;}
 
   /* signature / contact */
   .closing{border-top:1px solid var(--rule);padding:clamp(3rem,7vw,4.5rem) 0 clamp(2.5rem,5vw,3.5rem);}
@@ -317,7 +320,12 @@
       <p class="exhibit-label">Exhibit E<br>Principal</p>
       <div>
         <h2>About Jake Blaine</h2>
-        <p>Jake founded Pemetic Partners after operating inside growth-stage and family-owned businesses himself. He is a fifth-generation member of the Milliken family and currently serves on the boards of Pacolet Milliken and Milliken &amp; Company &mdash; the same standard of operating discipline he&rsquo;d want applied to his own family&rsquo;s companies is what he brings to every engagement: process before tooling, measured results before renewal, and a human signature on anything that has to stand up.</p>
+        <div class="principal-body">
+          <img class="principal-photo" src="/headshot.jpg" alt="Jake Blaine" width="150" height="150">
+          <div class="principal-text">
+            <p>Jake founded Pemetic Partners after operating inside growth-stage and family-owned businesses himself. He is a fifth-generation member of the Milliken family and currently serves on the boards of Pacolet Milliken and Milliken &amp; Company &mdash; the same standard of operating discipline he&rsquo;d want applied to his own family&rsquo;s companies is what he brings to every engagement: process before tooling, measured results before renewal, and a human signature on anything that has to stand up.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
