@@ -11,21 +11,23 @@
 <meta property="og:url" content="https://pemeticpartners.com/">
 <meta property="og:title" content="Pemetic Partners">
 <meta property="og:description" content="AI-enabled go-to-market and operating-partner advisory for technical, expertise-driven B2B companies — process first, AI second.">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://pemeticpartners.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pemetic Partners">
 <meta name="twitter:description" content="AI-enabled go-to-market and operating-partner advisory for technical, expertise-driven B2B companies — process first, AI second.">
+<meta name="twitter:image" content="https://pemeticpartners.com/og-image.jpg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root{
-    --bg:#EEF1EC;
-    --bg-raised:#E3E8DF;
-    --ink:#24391F;
-    --ink-soft:#52604C;
-    --rule:#C7CFC0;
-    --brass:#2E6478;
-    --brass-strong:#1F4A5A;
+    --bg:#FBF7EF;
+    --bg-raised:#F1E9D8;
+    --ink:#113241;
+    --ink-soft:#52646E;
+    --rule:#E3DBC9;
+    --brass:#2F666C;
+    --brass-strong:#16444D;
     --accent-wash:#DCE7E6;
-    --on-brass:#EEF1EC;
+    --on-brass:#FBF7EF;
 
     --font-display:'Fraunces','Iowan Old Style','Palatino Linotype',Georgia,serif;
     --font-body:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
@@ -41,27 +43,27 @@
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#162213;
-      --bg-raised:#1E2E1A;
-      --ink:#E6EBE0;
-      --ink-soft:#A6B49C;
-      --rule:#354430;
-      --brass:#6FA8BE;
-      --brass-strong:#8FC4D6;
-      --accent-wash:#24343A;
-      --on-brass:#101815;
+      --bg:#0F1D24;
+      --bg-raised:#172930;
+      --ink:#EDE7DA;
+      --ink-soft:#A9BCC2;
+      --rule:#2A3F47;
+      --brass:#6FB0AE;
+      --brass-strong:#8FCCC0;
+      --accent-wash:#1B2E33;
+      --on-brass:#0F1D24;
     }
   }
   :root[data-theme="dark"]{
-    --bg:#162213;
-    --bg-raised:#1E2E1A;
-    --ink:#E6EBE0;
-    --ink-soft:#A6B49C;
-    --rule:#354430;
-    --brass:#6FA8BE;
-    --brass-strong:#8FC4D6;
-    --accent-wash:#24343A;
-    --on-brass:#101815;
+    --bg:#0F1D24;
+    --bg-raised:#172930;
+    --ink:#EDE7DA;
+    --ink-soft:#A9BCC2;
+    --rule:#2A3F47;
+    --brass:#6FB0AE;
+    --brass-strong:#8FCCC0;
+    --accent-wash:#1B2E33;
+    --on-brass:#0F1D24;
   }
 
   *{box-sizing:border-box;}
@@ -112,7 +114,10 @@
   .wordmark{
     font-family:var(--font-display);font-weight:600;font-size:1.05rem;
     letter-spacing:0.01em;text-decoration:none;
+    display:inline-flex;align-items:center;gap:0.6rem;
   }
+  .wordmark svg{flex:none;border-radius:5px;}
+  .hero-logo{max-width:min(420px,80%);height:auto;display:block;margin-bottom:2.2rem;border-radius:2px;}
   .navlinks{display:flex;gap:1.75rem;align-items:center;font-size:0.92rem;}
   .navlinks a{text-decoration:none;color:var(--ink-soft);position:relative;padding-bottom:0.2rem;}
   .navlinks a::after{
@@ -213,7 +218,10 @@
 
 <nav class="nav">
   <div class="shell nav-inner">
-    <a class="wordmark" href="#top">Pemetic Partners</a>
+    <a class="wordmark" href="#top">
+      <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#74ACC7"/><rect y="32" width="64" height="32" fill="#16444D"/><text x="32" y="43" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#FBF7EF" text-anchor="middle">PP</text></svg>
+      Pemetic Partners
+    </a>
     <div class="navlinks">
       <a href="#method">Method</a>
       <a href="#scope">Scope</a>
@@ -227,6 +235,7 @@
 
 <main id="top">
   <section class="hero shell">
+    <img class="hero-logo" src="/logo.jpg" alt="Pemetic Partners" width="1100" height="733">
     <p class="eyebrow hero-eyebrow">AI-Enabled Go-to-Market &amp; Operating-Partner Advisory</p>
     <h1>Tribal, relationship-run commercial operations, turned into a system that scales.</h1>
     <p class="prose">Pemetic Partners works with technical, expertise-driven B2B companies&nbsp;&mdash; labs, platforms, energy and industrial businesses, specialized-services firms&nbsp;&mdash; to fix the process gaps that make growth unpredictable, then layer AI only where it moves a number.</p>
